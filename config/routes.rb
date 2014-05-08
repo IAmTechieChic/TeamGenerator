@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  
+  root 'students#index'
+
+  get 'teams/numberofteams' => 'teams#number_of_teams'
   resources :teams
 
   resources :students

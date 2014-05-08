@@ -17,6 +17,9 @@ class TeamsController < ApplicationController
     @team = Team.new
   end
 
+  def number_of_teams
+  end
+
   # GET /teams/1/edit
   def edit
   end
