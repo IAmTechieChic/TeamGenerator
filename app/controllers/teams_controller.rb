@@ -16,8 +16,15 @@ class TeamsController < ApplicationController
   def new
     @team = Team.new
   end
+  #GET /teams/numberofteams
+  def numteams
+ 
+  end
 
-  def number_of_teams
+  #POST /teams/createteams
+
+  def createteams
+    @numteams = params[:num_teams]
   end
 
   # GET /teams/1/edit
