@@ -4,7 +4,9 @@ Rails.application.routes.draw do
 
   get 'teams/numteams' => 'teams#numteams'
 
-  post 'teams/createteams' => 'teams#createteams'
+  post 'students/place_in_teams' => 'students#place_in_teams'
+
+   #get 'teams/placestudents' => 'students#place_in_teams'
   
   resources :teams
 

@@ -1,6 +1,8 @@
 class StudentsController < ApplicationController
   before_action :set_student, only: [:show, :edit, :update, :destroy]
 
+  include  StudentsHelper
+
   # GET /students
   # GET /students.json
   def index
@@ -19,6 +21,13 @@ class StudentsController < ApplicationController
 
   # GET /students/1/edit
   def edit
+  end
+
+  def place_in_teams
+    number_of_teams = params[:num_teams].to_i
+    @students = Student.all
+    @students = generate_random_array(@students)
+    @teams = assign_to_team(number_of_teams,@students)
   end
 
   # POST /students
