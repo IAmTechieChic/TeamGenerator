@@ -25,6 +25,14 @@ class TeamsController < ApplicationController
 
   def createteams
     @numteams = params[:num_teams]
+    @students= Student.all
+    @newarray=[]
+
+    @students.each do |s|
+      @newarray << s.name
+    end
+
+    @shuffarray = @newarray.shuffle
   end
 
   # GET /teams/1/edit
