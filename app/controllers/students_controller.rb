@@ -23,6 +23,12 @@ class StudentsController < ApplicationController
   def edit
   end
 
+  def clear_all_students
+    clear_student_table
+    render :action => 'index'
+  end
+
+
   def place_in_teams
     number_of_teams = params[:num_teams].to_i
     @students = Student.all

@@ -6,6 +6,8 @@ Rails.application.routes.draw do
 
   post 'students/place_in_teams' => 'students#place_in_teams'
 
+  get 'students/clear_all_students' => 'students#clear_all_students'
+
    #get 'teams/placestudents' => 'students#place_in_teams'
   
   resources :teams

@@ -35,4 +35,9 @@ module StudentsHelper
 		return student["name"]
 		
 	end
+
+	
+	def clear_student_table
+		ActiveRecord::Base.connection.execute("DELETE FROM students")
+	end
 end
