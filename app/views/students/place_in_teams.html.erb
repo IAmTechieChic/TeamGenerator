@@ -1,0 +1,10 @@
+Place students in teams
+
+<br>
+<% @teams.each do |key, value| %>
+	<%= key %><br>
+			<% value.each do |id|%>
+				<%= student_name(id) %>
+				<%end%><br>
+				
+	<%end %>
