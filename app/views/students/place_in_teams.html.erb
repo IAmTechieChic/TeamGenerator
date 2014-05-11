@@ -1,10 +1,17 @@
-Place students in teams
+
 
 <br>
 <% @teams.each do |key, value| %>
-	<%= key %><br>
+<div class="span3">
+  <div class="well sidebar-nav" style= "background-color:#99D6FF; border:5px outset grey;">
+	<h4><u><%= key %></u></h4><br>
 			<% value.each do |id|%>
-				<%= student_name(id) %>
+				<ul>
+				<li><strong><%= student_name(id) %></strong></li>
+				</ul>
+  
 				<%end%><br>
-				
+
+  </div>
+</div>			
 	<%end %>
